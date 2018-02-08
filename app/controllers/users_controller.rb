@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @user = User.new(users_params)
 
     if @user.save
-      redirect_to toots_path
+      log_in @user
+      redirect_to @user
     else
       render :new
     end
