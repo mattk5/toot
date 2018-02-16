@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @toots = @user.toots.paginate(page: params[:page])
   end
 
   private

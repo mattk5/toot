@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 20180212024959) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "author"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -22,11 +21,11 @@ ActiveRecord::Schema.define(version: 20180212024959) do
   end
 
   create_table "toots", force: :cascade do |t|
-    t.string "author"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.index ["user_id", "created_at"], name: "index_toots_on_user_id_and_created_at"
   end
 
   create_table "users", force: :cascade do |t|

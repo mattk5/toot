@@ -2,7 +2,6 @@ class TootsController < ApplicationController
   before_action :logged_in_user, only: [:create]
 
   def index
-    @toots = Toot.all
     @toot = Toot.new
   end
 
@@ -12,8 +11,12 @@ class TootsController < ApplicationController
       flash[:success] = "Toot posted!!"
       redirect_to root_url
     else
-      render 'root_url'
+      render root_url
     end
+  end
+
+  def show
+
   end
 
   private

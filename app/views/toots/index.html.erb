@@ -1,10 +1,10 @@
 <h1>Welcome to Toot</h1>
 
 <div class="main-container">
-  <h3>See what the world is saying</h3>
-    <h5><%= link_to "Profile", current_user %></h5>
+  <h3>Talk about the things that are important to you.</h3>
     <div class="create-toot">
       <% if logged_in? %>
+        <h5><%= link_to "Profile", current_user %></h5>
         <%= render 'shared/toot_form' %>
       <% end %>
     </div>
@@ -12,4 +12,4 @@
       <p>All Toots</p>
     </div>
 </div>
-<%= link_to 'Create new account', sign_up_path %>
+<%= link_to 'Create new account', sign_up_path %> or <%= link_to 'Sign in', log_in_path %>

@@ -4,7 +4,6 @@ class Toot < ApplicationRecord
 
   default_scope -> { order(created_at: :desc) }
 
-  validates :author, :body, presence: true, uniqueness: true
-  validates :body, length: { maximum: 280 }
+  validates :body, presence: true, uniqueness: true, length: {maximum: 280}
   validates :user_id, presence: true
 end
