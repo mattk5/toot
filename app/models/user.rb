@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  has_many :toots
+  has_many :toots, dependent: :destroy 
   has_many :comments
 
   has_secure_password

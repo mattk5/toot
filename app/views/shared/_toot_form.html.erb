@@ -1,0 +1,6 @@
+<%= form_for(@toot) do |f| %>
+  <div class="field">
+    <%= f.text_area :body, placeholder: "New toot..." %>
+  </div>
+  <%= f.submit "Create" %>
+<% end %>
