@@ -2,9 +2,11 @@
 
 <div class="main-container">
   <h3>See what the world is saying</h3>
-    <h5><%= current_user.username %></h5>
+    <h5><%= link_to "Profile", current_user %></h5>
     <div class="create-toot">
-      <% form_for %>
+      <% if logged_in? %>
+        <%= render 'shared/toot_form' %>
+      <% end %>
     </div>
     <div class="toots-container">
       <p>All Toots</p>

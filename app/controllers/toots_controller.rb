@@ -1,18 +1,19 @@
 class TootsController < ApplicationController
+  before_action :logged_in_user, only: [:create]
+
   def index
     @toots = Toot.all
-  end
-
-  def show
-
-  end
-
-  def new
     @toot = Toot.new
   end
 
   def create
-      @toot = Toot.new(toot_params)
+    @toot = current_user.toots.build(toot_params)
+    if @toot.save
+      flash[:success] = "Toot posted!!"
+      redirect_to root_url
+    else
+      render 'root_url'
+    end
   end
 
   private
