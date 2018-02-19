@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :users, except: :new
   get '/sign_up', to: 'users#new'
   get '/log_in', to: 'sessions#new'
-  get '/log_in', to: 'sessions#create'
-  get '/log_out', to: 'sessions#destroy'
+  post '/log_in', to: 'sessions#create'
+  delete '/log_out', to: 'sessions#destroy'
 end

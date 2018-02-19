@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  has_many :toots, dependent: :destroy 
+  has_many :toots, dependent: :destroy
   has_many :comments
 
   has_secure_password
@@ -33,5 +33,9 @@ class User < ApplicationRecord
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def feed
+      Toot.where("user_id = ?", id)
   end
 end

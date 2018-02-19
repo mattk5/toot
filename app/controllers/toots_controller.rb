@@ -3,6 +3,8 @@ class TootsController < ApplicationController
 
   def index
     @toot = Toot.new
+    # @feed_toots = current_user.feed.paginate(page: params[:page])
+    @toots = Toot.all 
   end
 
   def create
@@ -18,6 +20,8 @@ class TootsController < ApplicationController
   def show
 
   end
+
+
 
   private
 
