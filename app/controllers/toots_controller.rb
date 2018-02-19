@@ -4,7 +4,7 @@ class TootsController < ApplicationController
   def index
     @toot = Toot.new
     # @feed_toots = current_user.feed.paginate(page: params[:page])
-    @toots = Toot.all 
+    @toots = Toot.all
   end
 
   def create
@@ -18,15 +18,12 @@ class TootsController < ApplicationController
   end
 
   def show
-
   end
-
-
 
   private
 
-  def toot_params
-    params.require(:toot).permit(:author, :body)
-  end
+    def toot_params
+      params.require(:toot).permit(:author, :body)
+    end
 
 end

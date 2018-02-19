@@ -1,13 +1,13 @@
 <h1>Welcome to Toot</h1>
 
 <div class="main-container">
-  <h3>Talk about the things that are important to you.</h3>
     <div class="create-toot">
       <% if logged_in? %>
         <h5><%= link_to "Profile", current_user %></h5>
         <%= render 'shared/toot_form' %>
       <% end %>
     </div>
+    <h3>Talk about the things that are important to you.</h3>
     <div class="toots-container">
       <p>All Toots</p>
       <%= render 'shared/feed' %>
