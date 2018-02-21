@@ -1,4 +1,4 @@
 <li>
   <!-- <%= link_to toot.user.name, toot.user %> -->
-  <span><%= toot.body %></span>
+  <span><%= link_to toot.body, toot_path(toot) %></span>
 </li>

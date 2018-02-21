@@ -18,6 +18,7 @@ class TootsController < ApplicationController
   end
 
   def show
+    @toot = Toot.find(params[:id])
   end
 
   private
