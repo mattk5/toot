@@ -1,3 +1,16 @@
 <h1>Welcome to Toot</h1>
 
-<%= link_to 'Create new account', new_user_path %>
+<div class="main-container">
+    <div class="create-toot">
+      <% if logged_in? %>
+        <h5><%= link_to "Profile", current_user %></h5>
+        <%= render 'shared/toot_form' %>
+      <% end %>
+    </div>
+    <h3>Talk about the things that are important to you.</h3>
+    <div class="toots-container">
+      <p>All Toots</p>
+      <%= render 'shared/feed' %>
+    </div>
+</div>
+<%= link_to 'Create new account', sign_up_path %> or <%= link_to 'Sign in', log_in_path %>

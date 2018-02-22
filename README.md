@@ -1,24 +1,5 @@
-# README
+TOOT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Toot is a platform to hold meaningful conversations about topics that are important to you.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You decide who to follow based off of their content. Users post one Toot a day and host a conversation with followers, Toot's and comments can not be deleted which encourages thoughtful engagement.
