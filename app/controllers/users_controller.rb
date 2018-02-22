@@ -21,6 +21,10 @@ class UsersController < ApplicationController
     @toots = @user.toots.paginate(page: params[:page])
   end
 
+  def edit
+      @user = User.find(params[:id])
+  end
+
   private
 
     def users_params

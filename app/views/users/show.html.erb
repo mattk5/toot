@@ -4,6 +4,7 @@
   <%= @user.email %>
   <%= @user.name %>
 </div>
+<%= link_to "Edit profile", edit_user_path(@user) %>
 <div class="user-toots">
   <% if @user.toots.any? %>
     <h3>Your Toots (<%= @user.toots.count %>)</h3>
