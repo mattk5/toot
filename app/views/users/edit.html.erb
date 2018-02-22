@@ -9,4 +9,9 @@
 
   <%= f.label :email %>
   <%= f.text_field :email %>
+
+  <%= f.submit "Update profile" %>
 <% end %>
+
+<%= link_to "Profile", user_path(@user) %>
+<%= link_to "Home", root_url %>
