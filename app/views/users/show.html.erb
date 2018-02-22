@@ -1,0 +1,18 @@
+<h1>Your profile</h1>
+<div class="user-info">
+  <%= @user.username %>
+  <%= @user.email %>
+  <%= @user.name %>
+</div>
+<%= link_to "Edit profile", edit_user_path(@user) %>
+<div class="user-toots">
+  <% if @user.toots.any? %>
+    <h3>Your Toots (<%= @user.toots.count %>)</h3>
+      <ol>
+        <%= render @toots %>
+      </ol>
+    <%= will_paginate @toots %>
+  <% end %>
+</div>
+<%= link_to 'Home', root_url %>
+<%= link_to 'Logout', log_out_path, method: :delete %>
