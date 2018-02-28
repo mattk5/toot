@@ -1,0 +1,11 @@
+<%= fields_for(@comment) do |f| %>
+  <div class="field">
+    <%= f.text_area :body, placeholder: "Add comment..."%>
+  </div>
+  <%= f.submit "Add" %>
+<% end %>
+
+<!--
+-get the toot that user will comment on
+-add logic in controller so that comment is attached to toot
+ -->
