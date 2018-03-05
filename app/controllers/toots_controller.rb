@@ -8,6 +8,7 @@ class TootsController < ApplicationController
 
   def create
     @toot = current_user.toots.build(toot_params)
+
     if @toot.save
       flash[:success] = "Toot posted!!"
       redirect_to root_url
@@ -18,6 +19,7 @@ class TootsController < ApplicationController
 
   def show
     @toot = Toot.find(params[:id])
+    @comments = @toot.comments.includes(:user)
   end
 
   private

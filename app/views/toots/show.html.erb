@@ -1,4 +1,7 @@
 <h3><%= @toot.body %></h3>
 <h5>Author: <%= @toot.user.username %></h5>
 <%= render 'shared/comment_form' %>
+<div class="comments">
+  <%= render @comments %>
+</div>
 <%= link_to "Home", root_url %>

@@ -1,15 +1,21 @@
 class CommentsController < ApplicationController
-  before_action :logged_in_user, only: [:create]
-  before_action :find_commentable
+  # before_action :logged_in_user, only: [:create]
+  before_action :find_toot
+
+  def new
+    @comment = Comment.new
+  end
+
 
   def create
-    @comment = @commentable.comments.new(comment_params)
+    @comment = @toot.comments.create(comment_params)
+    @comment.user_id = current_user.id 
 
     if @comment.save
       flash[:success] = "Comment added!"
-      redirect_to @comment.toot
+      redirect_to toot_path(@toot)
     else
-      render :new
+      render toot_path(@toot)
     end
   end
 
@@ -23,8 +29,7 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:body)
     end
 
-    def find_commentable
-      @commentable = Toot.find_by_id(params[:toot_id]) if params[:toot_id]
-      @commentable = User.find_by_id(params[:user_id]) if params[:user_id]
+    def find_toot
+      @toot = Toot.find(params[:toot_id])
     end
 end

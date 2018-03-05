@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users do
-    resources :comments 
+    resources :comments
   end
   get '/sign_up', to: 'users#new'
   get '/log_in', to: 'sessions#new'
