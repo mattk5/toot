@@ -5,7 +5,11 @@
   <%= @user.name %>
 </div>
 <%= link_to "Edit profile", edit_user_path(@user) %>
+<section class="counts">
+  <%= render 'shared/follow_counts' %>
+</section>
 <div class="user-toots">
+  <%= render 'follow_form' if logged_in? %>
   <% if @user.toots.any? %>
     <h3>Your Toots (<%= @user.toots.count %>)</h3>
       <ol>
