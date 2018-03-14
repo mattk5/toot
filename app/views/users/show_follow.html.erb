@@ -1,0 +1,19 @@
+<div>
+  <section>
+    <h1><%= @user.name %></h1>
+    <span><%= link_to "My Profile", @user %></span>
+    <span>Toot: <%= @user.toots.count %></span>
+  </section>
+  <section>
+    <%= render 'shared/follow_counts' %>
+  </section>
+  <section>
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="users follow">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </section>
+</div>
