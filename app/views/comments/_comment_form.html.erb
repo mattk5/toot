@@ -1,0 +1,7 @@
+
+<%= form_for([@toot, @toot.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.text_area :body, placeholder: "Add comment..." %>
+  </div>
+  <%= f.submit "Add" %>
+<% end %>
