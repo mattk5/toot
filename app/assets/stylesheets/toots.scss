@@ -1,10 +1,22 @@
 // Place all the styles related to the Toots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+li {
+  list-style-type: none;
+}
+
 .toot {
   font-family: arial;
   text-align: center;
   margin: 0;
+}
+
+.toot-list {
+  padding: 3px;
+}
+
+.single-toot a {
+  text-decoration: none;
 }
 
 .header, h1 {
@@ -12,9 +24,25 @@
   margin: 0;
 }
 
-.main-container {
+.user-header {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.create-toot {
   background-color: #F0F8FF;
+  position: absolute;
+  left: 20px;
+}
+
+.main-container {
+  // background-color: #F0F8FF;
   margin: 0;
+}
+
+.toots-container {
+  background-color: white;
 }
 
 .footer {

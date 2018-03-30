@@ -1,10 +1,18 @@
-<h1>Your profile</h1>
-<div class="user-info">
-  <%= @user.username %>
-  <%= @user.email %>
-  <%= @user.name %>
+<div class="header-user">
+  <h1>Your profile</h1>
+  <div class="profile-links">
+    <%= link_to "Edit profile", edit_user_path(@user) %>
+    <%= link_to 'Home', root_url %>
+    <%= link_to 'Logout', log_out_path, method: :delete %>
+  </div>
 </div>
-<%= link_to "Edit profile", edit_user_path(@user) %>
+<div>
+  <ul class="user-info">
+    <li><%= @user.username %></li>
+    <li><%= @user.email %></li>
+    <li><%= @user.name %></li>
+  </ul>
+</div>
 <section class="counts">
   <%= render 'shared/follow_counts' %>
 </section>
@@ -18,5 +26,3 @@
     <%= will_paginate @toots %>
   <% end %>
 </div>
-<%= link_to 'Home', root_url %>
-<%= link_to 'Logout', log_out_path, method: :delete %>
