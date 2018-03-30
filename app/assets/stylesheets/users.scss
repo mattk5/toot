@@ -1,3 +1,18 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header-user, h1 {
+  background-color: #99ccff;
+  margin: 0;
+}
+
+.profile-links {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.user-info, li {
+  padding: 3px;
+}
