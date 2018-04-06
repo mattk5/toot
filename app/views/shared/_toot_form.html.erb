@@ -1,4 +1,7 @@
 <%= form_for(@toot) do |f| %>
+  <% flash.each do |name, msg| %>
+    <%= msg %>
+  <% end %>
   <div class="field">
     <%= f.text_area :body, placeholder: "New toot..." %>
   </div>

@@ -1,5 +1,5 @@
 <div class="header">
-  <h1>Welcome to Toot</h1>
+  <p id="header-title">Toot</p>
   <div class="user-header">
     <%= link_to "Profile", current_user %>
     <% if !logged_in? %>
@@ -17,9 +17,11 @@
       <% end %>
     </div>
     <div class="toots-container">
-      <h3>Talk about the things that are important to you.</h3>
-      <p>All Toots</p>
-      <%= render 'shared/feed' %>
+      <h3 id="main-banner">Talk about the things that are important to you.</h3>
+      <div class="toots-feed">
+        <p id="feed-title">All Toots</p>
+        <%= render 'shared/feed' %>
+      </div>
     </div>
 </div>
 <div class="footer">

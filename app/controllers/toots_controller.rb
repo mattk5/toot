@@ -10,10 +10,11 @@ class TootsController < ApplicationController
     @toot = current_user.toots.build(toot_params)
 
     if @toot.save
-      flash[:success] = "Toot posted!!"
+      flash[:notice] = 'Toot created!!'
       redirect_to root_url
     else
-      render root_url
+      flash[:error] = 'Toot too long!!'
+      redirect_to root_url
     end
   end
 
