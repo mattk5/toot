@@ -12,41 +12,77 @@ li {
 }
 
 .toot-list {
-  padding: 3px;
+  padding: 7px;
 }
 
 .single-toot a {
   text-decoration: none;
 }
 
-.header, h1 {
+.header {
   background-color: #99ccff;
   margin: 0;
+  padding: 20px;
+}
+
+#header-title {
+  font-size: 40px;
+  font-weight: 200;
 }
 
 .user-header {
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 100px;
 }
 
 .create-toot {
-  background-color: #F0F8FF;
   position: absolute;
-  left: 20px;
+  right: 20px;
+  margin-top: 20px;
+  margin-right: 150px;
 }
 
-.main-container {
-  // background-color: #F0F8FF;
-  margin: 0;
+#main-banner {
+  background-color: #F0F8FF;
+  padding: 50px;
+  padding-right: 700px;
+  font-size: 28px;
+  font-weight: 200;
 }
 
-.toots-container {
-  background-color: white;
+.toots-feed {
+  background-color: #f5f5f0;
+  margin: 100px;
+  padding: 100px;
+  position: relative;
+}
+
+#feed-title{
+  font-size: 26px;
 }
 
 .footer {
   background-color: #66b3ff;
   margin: 0;
   padding: 0;
+}
+
+//single toot
+#toot-header {
+  background-color: #99ccff;
+  margin: 0;
+  padding: 5px;
+}
+
+#toot-body {
+  font-size: 24px;
+}
+
+#toot-author {
+  font-size: 14px;
+}
+
+#toot-comment {
+  font-size: 20px;
 }

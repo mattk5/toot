@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = "Comment added!"
       redirect_to toot_path(@toot)
     else
       render toot_path(@toot)
