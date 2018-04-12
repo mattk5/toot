@@ -4,7 +4,7 @@
     <%= link_to "Profile", current_user %>
     <% if !logged_in? %>
       <%= link_to 'Create new account', sign_up_path %> or <%= link_to 'Sign in', log_in_path %>
-    <% else%>
+    <% else %>
       <%= link_to 'Logout', log_out_path, method: :delete %>
     <% end %>
   </div>
